@@ -35,7 +35,7 @@ function addToList() {
         let listItem = document.createElement("li");
         listItem.innerHTML = `<p class="list-item"> <span class="name">${productName}</span> for 
         <span class="price"> ${productPrice}</span> UAH </p>`;
-        pricesArray.push(productPrice); //add a price to an array
+        pricesArray.push(Number(productPrice)); //add a price to an array
 
         let delBtn = document.createElement("p");
         delBtn.innerHTML = `(delete item)`;
