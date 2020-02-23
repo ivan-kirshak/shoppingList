@@ -4,9 +4,10 @@ let formBtn = document.getElementById("formBtn");
 let items = document.getElementById("items");
 let conclusion = document.getElementById("conclusion");
 
-let numRegex = /^([1-9]\d*|0)(\.\d+)?$/;
+let numRegex = /^-?(?:\d+|\d{1,3}(?:,\d{3})+)(?:(\.|,)\d+)?$/;
 // /^([1-9]\d*|0)(\.\d+)?$/ - regex for numbers with .
 // /^[0-9]+$/
+// /^-?(?:\d+|\d{1,3}(?:,\d{3})+)(?:(\.|,)\d+)?$/ - regex for num with comma or dot
 
 // make an array of prices
 let pricesArray = [];
