@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="head">
+        <h1>Shopping List</h1>
+
+    </header>
+
+    <main class="main">
+        <div class="form">
+            <div class="form-container">
+                <div class="form-container_item">
+                    <label for="item">What have you bought?</label>
+                    <br>
+                    <input type="text" id="itemName" placeholder="Print name of your item here">
+                    <p class="error" id="nameErr"></p>
+                </div>
+                <div class="form-container_item">
+                    <label for="price">How much does it cost?</label>
+                    <br>
+                    <input type="text" id="itemPrice" placeholder="Print the price of your item here">
+                    <p class="error" id="priceErr"></p>
+                </div>
+            </div>
+            <input type="button" id="formBtn" value="Plus item">
+        </div>
+        <div class="container">
+            <ol id="items" class="list"></ol>
+            <h1 class="conclusion" id="conclusion"></h1>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>

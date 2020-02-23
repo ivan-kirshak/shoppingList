@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, label, input[type="text"], input[type="button"] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container, .form-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.error {
+  color: red;
+}
+
+.head {
+  text-align: center;
+  background: linear-gradient(45deg, #0060aa 40%, #243a5e 40%);
+}
+
+.head h1 {
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.main {
+  background: #f3f1ef;
+  min-height: 90vh;
+}
+
+.main .form {
+  text-align: center;
+  background: linear-gradient(135deg, #f3f1ef 90%, #1b3051 90%);
+}
+
+.main .form .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main .form .form-container .form-container_item {
+  padding: 1rem;
+}
+
+.main .form .form-container .form-container_item label {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.main .form .form-container .form-container_item input[type="text"], .main .form .form-container .form-container_item input[type="number"] {
+  border: none;
+  color: #000;
+  background: transparent;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.main .form input[type="button"] {
+  border: none;
+  outline: none;
+  padding: 1rem;
+  font-size: 1.25rem;
+  color: #fff;
+  background-color: #0267b8;
+  cursor: pointer;
+  border-radius: 1.75rem;
+  margin: 1rem;
+}
+
+.main .list {
+  width: 90%;
+  margin: 0 auto;
+  list-style-type: none;
+}
+
+.main .list li {
+  padding: 1rem;
+  border: 1px solid #1b3051;
+  margin: 0.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.main .list .price {
+  color: #0267b8;
+}
+
+.main .list .close {
+  color: red;
+}
+
+.main .list .close:hover {
+  color: #fff;
+  background-color: red;
+}
+
+.main .conclusion {
+  text-align: center;
+  color: #1b3051;
+}
+
+@media (max-width: 768px) {
+  .container, .form-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 375px) {
+  .main .form .form-container .form-container_item label {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
