@@ -85,6 +85,7 @@ body, label, input[type="text"], input[type="button"] {
             display: flex;
             justify-content: space-around;
             align-items: flex-end;
+            flex-flow: row wrap;
         }
         .price {
             color: $blue-two;
