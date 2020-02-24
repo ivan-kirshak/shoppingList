@@ -120,6 +120,10 @@ body, label, input[type="text"], input[type="button"] {
   color: #1b3051;
 }
 
+.main .total {
+  color: #038387;
+}
+
 @media (max-width: 768px) {
   .container, .form-container {
     width: 90%;

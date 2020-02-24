@@ -7,6 +7,7 @@ $blue-three: #243a5e;
 $blue-four: #1b3051;
 $gray-three: #f7f7f7;
 $black-one: #000;
+$teal-one: #038387;
 * {
   margin: 0;
   padding: 0;
@@ -101,6 +102,9 @@ body, label, input[type="text"], input[type="button"] {
     .conclusion {
         text-align: center;
         color: $blue-four;
+    }
+    .total {
+        color: $teal-one;
     }
 }
 @media (max-width: 768px){
