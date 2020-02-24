@@ -4,7 +4,7 @@ let formBtn = document.getElementById("formBtn");
 let items = document.getElementById("items");
 let conclusion = document.getElementById("conclusion");
 
-let numRegex = /^-?(?:\d+|\d{1,3}(?:,\d{3})+)(?:(\.|,)\d+)?$/;
+let numRegex = /^([1-9]\d*|0)(\.\d+)?$/;
 // /^([1-9]\d*|0)(\.\d+)?$/ - regex for numbers with .
 // /^[0-9]+$/
 // /^-?(?:\d+|\d{1,3}(?:,\d{3})+)(?:(\.|,)\d+)?$/ - regex for num with comma or dot
@@ -48,6 +48,10 @@ function addToList() {
         listItem.appendChild(delBtn);
         delBtn.addEventListener("click", removeItem, false);
 
+        // make a sum of prices in array
+        let summary = Number(pricesArray.reduce((a, b) => a + b, 0)).toFixed(2);
+        // display the total sum to pay 
+        conclusion.innerHTML = `You will pay ${summary} UAH for your items`;
     }
 }
 formBtn.addEventListener("click", addToList, false);
