@@ -15,9 +15,7 @@ let pricesArray = [];
 function removeItem(e) {
     e.target.parentElement.remove();
     let index = pricesArray.indexOf(e.target.parentElement);
-    if (index === -1) {
-        pricesArray.splice(index, 1)
-    }
+    pricesArray.splice(index, 1);
     let summary = Number(pricesArray.reduce((a, b) => a + b, 0)).toFixed(2);
     conclusion.innerHTML = `You will pay <span class="total">${summary}</span> UAH for your items`;
 }
