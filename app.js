@@ -14,7 +14,10 @@ let pricesArray = [];
 
 function removeItem(e) {
     e.target.parentElement.remove();
-    let index = pricesArray.indexOf(e.target.parentElement);
+    // line below is weird, but it works
+    // currently this is the only way i find out to work
+    let price = Number(e.target.parentElement.querySelector(".price").innerText);
+    let index = pricesArray.indexOf(price);
     pricesArray.splice(index, 1);
     let summary = Number(pricesArray.reduce((a, b) => a + b, 0)).toFixed(2);
     conclusion.innerHTML = `You will pay <span class="total">${summary}</span> UAH for your items`;
@@ -41,7 +44,7 @@ function addToList() {
 
         let listItem = document.createElement("li");
         listItem.innerHTML = `<p class="list-item"> <span class="name">${productName}</span> for 
-        <span class="price"> ${productPrice}</span> UAH </p>`;
+        <span class="price">${productPrice}</span> UAH </p>`;
         pricesArray.push(Number(productPrice)); //add a price to an array
 
         let delBtn = document.createElement("p");
