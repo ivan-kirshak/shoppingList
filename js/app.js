@@ -62,3 +62,13 @@ function addToList() {
     }
 }
 formBtn.addEventListener("click", addToList, false);
+
+//PWA functionality
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+        navigator.serviceWorker
+            .register("/serviceWorker.js")
+            .then(res => console.log("service worker seems to work"))
+            .catch(res => console.log("something is wrong service worker", err))
+    })
+}
