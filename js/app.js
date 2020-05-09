@@ -62,6 +62,11 @@ function addToList() {
     }
 }
 formBtn.addEventListener("click", addToList, false);
+document.body.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        addToList();
+    }
+}, false)
 
 //PWA functionality
 if ("serviceWorker" in navigator) {
